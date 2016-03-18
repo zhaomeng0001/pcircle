@@ -1,12 +1,13 @@
-package com.leslierong.wlk.lastworld.ui;
+package com.leslierong.wlk.pcircle.ui;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+
 import com.leslierong.wlk.lastworld.R;
-import com.leslierong.wlk.lastworld.util.MyApplication;
+import com.leslierong.wlk.pcircle.util.MyApplication;
 
 
 /**
@@ -28,7 +29,7 @@ public class WelcomeActivity extends BaseActivity{
             @Override
             public void run() {
 
-                if(MyApplication.getPreferences().getBoolean("isFirst",true)){
+                if (MyApplication.getPreferences().getBoolean("isFirst", true)) {
 
                     SharedPreferences.Editor editor = MyApplication.getPreferences().edit();
 
@@ -38,25 +39,27 @@ public class WelcomeActivity extends BaseActivity{
 
                     Intent intent = new Intent();
 
-                    intent.setClass(context,IntroduceActivity.class);
+                    intent.setClass(context, IntroduceActivity.class);
 
                     startActivity(intent);
 
-                }
-                else{
+                    finish();
+
+                } else {
 
                     Intent intent = new Intent();
 
-                    intent.setClass(context,MainActivity.class);
+                    intent.setClass(context, MainActivity.class);
 
                     startActivity(intent);
+
+                    finish();
 
                 }
 
             }
         },1500);
 
-        finish();
 
     }
 }

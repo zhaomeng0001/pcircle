@@ -1,18 +1,18 @@
-package com.leslierong.wlk.lastworld.ui;
+package com.leslierong.wlk.pcircle.ui;
 
 import android.os.Bundle;
+
 import com.leslierong.wlk.lastworld.R;
 
 /**
  * Created by wlk-android on 2016/3/10.
  */
-public class MainActivity extends BaseActivity{
+public class IntroduceActivity extends BaseActivity{
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-
+        setContentView(R.layout.introduce);
     }
 }

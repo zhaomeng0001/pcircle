@@ -1,16 +1,15 @@
-package com.leslierong.wlk.lastworld.ui;
+package com.leslierong.wlk.pcircle.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
+import android.support.v7.app.AppCompatActivity;
 
-import com.leslierong.wlk.lastworld.util.MyApplication;
+import com.leslierong.wlk.pcircle.util.MyApplication;
 
 /**
  * Created by wlk-android on 2016/3/10.
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
 
     @Override
@@ -18,11 +17,9 @@ public class BaseActivity extends Activity {
 
         super.onCreate(savedInstanceState);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         MyApplication.getActivities().add(this);
+
+
     }
 
 
@@ -51,4 +48,5 @@ public class BaseActivity extends Activity {
         System.exit(0);
 
     }
+
 }

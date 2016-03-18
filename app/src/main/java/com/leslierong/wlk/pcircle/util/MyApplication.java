@@ -1,4 +1,4 @@
-package com.leslierong.wlk.lastworld.util;
+package com.leslierong.wlk.pcircle.util;
 
 import android.app.Activity;
 import android.app.Application;
